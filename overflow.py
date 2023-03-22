@@ -1,6 +1,10 @@
 from pwn import *
 
-p = remote("206.189.121.145", 31207)
+# enable this for local testing
+#p = process("./labyrinth")
+
+# enable this when ready to exploit the actual app
+#p = remote("$IP", $PORT)
 
 p.recvuntil(b">> ")
 p.sendline(b"69")
